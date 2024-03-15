@@ -1,0 +1,33 @@
+{
+	"application": {
+		"name": "Endoscopy Tool Tracking VTK",
+		"authors": [
+			{
+				"name": "Vicente Bolea <vicente.bolea@kitware.com>",
+				"affiliation": "Kitware"
+			}
+		],
+		"language": "C++",
+		"version": "1.0",
+		"changelog": {
+			"1.0": "Initial Release"
+		},
+		"holoscan_sdk": {
+			"minimum_required_version": "0.5.0",
+			"tested_versions": [
+				"0.5.0"
+			]
+		},
+		"platforms": ["amd64", "arm64"],
+		"tags": ["Endoscopy", "vtk" ],
+		"ranking": 0,
+		"dependencies": {
+			"model": "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara-holoscan/resources/holoscan_endoscopy_sample_data",
+			"data": "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara-holoscan/resources/holoscan_endoscopy_sample_data"
+		},
+		"run": {
+			"command": "<holohub_app_bin>/endoscopy_tool_tracking_vtk --data <holohub_data_dir>/endoscopy",
+			"workdir": "holohub_bin"
+		}
+	}
+}

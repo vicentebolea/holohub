@@ -41,6 +41,14 @@ add_holohub_application(endoscopy_tool_tracking DEPENDS
                         HOLOSCAN_SAMPLE_APP
                         )
 
+add_holohub_application(endoscopy_tool_tracking_vtk DEPENDS
+                        OPERATORS lstm_tensor_rt_inference
+                                  tool_tracking_postprocessor
+                                  vtk_op
+                                  OPTIONAL deltacast_videomaster yuan_qcap
+                        HOLOSCAN_SAMPLE_APP
+                        )
+
 add_subdirectory(h264)
 
 add_holohub_application(high_speed_endoscopy DEPENDS
